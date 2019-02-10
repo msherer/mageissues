@@ -109,10 +109,10 @@
             <div class="row justify-content-center">
                 <div class="col-12 pt-1 pb-1">
                     <div class="col-6 float-left">
-                        <a href="{{ url('/') }}">We Fix it</a> | <a href="https://kopiluwakdirect.com/">Built with Caffiene</a> | <a href="{{ url('about') }}">About</a>
+                        <a href="{{ url('/') }}">We Fix it</a> | <a href="https://kopiluwakdirect.com/">Built with Caffeine</a> | <a href="{{ url('about') }}">About</a>
                     </div>
                     <div class="col-6 float-left">
-                        <span class="float-right"><a href="https://twitter.com/sat_boodead">Twitter</a> | <a href="https://www.mediotype.com/">Mediotype</a> | <a href="https://magento.com/">Magento</a></span>
+                        <span class="float-right"><a href="https://twitter.com/sat_boodead">Twitter</a> | <a href="https://mattsherer.com/">MattSherer</a> | <a href="https://magento.com/">Magento</a></span>
                     </div>
                 </div>
             </div>

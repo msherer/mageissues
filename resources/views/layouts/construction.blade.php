@@ -14,20 +14,25 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style type="text/css">
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
         #footer a {
             color: #ffa500;
         }
 
-
-
         .overlay {
-            opacity: 0.8;
             position: fixed;
             top: 0;
             left: 0;
@@ -36,6 +41,7 @@
             width: 100%;
             height: 100%;
         }
+
         .opacity-80 {
             opacity: 0.8;
         }
@@ -66,16 +72,36 @@
             right: 0;
         }
 
-        .background-image {
-            background-image: url('images/construction/milwaukee.jpg');
+        @media screen and (max-width: 1920px) {
+            .background-image {
+                background-image: url('images/construction/milwaukee.jpg');
+                background-size: cover;
+            }
+        }
+
+        @media screen and (min-width: 1921px) {
+            .background-image {
+                background-image: url('images/construction/milwaukee-wide.jpg');
+                background-size: cover;
+            }
         }
 
         .cover-background {
             z-index: -1;
         }
 
-        .navbar {
-            z-index: -10;
+        .construction-banner {
+            font-size: 2em;
+            color: #ffffff;
+            font-weight: 200;
+        }
+
+        .construction-button {
+            border-radius: 1.25rem;
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
+            font-weight: bold;
+            border: 2px solid;
         }
     </style>
 </head>
@@ -154,27 +180,41 @@
         </div>
     </nav>
 
-    <main class="py-4">
-        @yield('content')
-    </main>
+    <div class="row" style="min-height: 20rem;"></div>
+    <div class="row align-items-center" style="min-height: 10rem;">
+        <div class="col align-self-center text-center">
+            <h3 class="construction-banner">Our website is actively under construction. We'll be here soon with our new<br/> awesome site, check back soon for updates.</h3>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col align-self-center text-center" style="font-size: 2em; color: #ffffff;">
+            <a class="btn btn-outline-light construction-button" href="{{ url('/') }}">Return Home</a>
+        </div>
+        <div class="col"></div>
+    </div>
+
     <div class="overlay">
         <div class="overlay-color gradient-1 opacity-80"></div>
         <div class="overlay-image cover-background background-image"></div>
     </div>
-</div>
-<div id="footer" class="py-4 bg-white">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 pt-1 pb-1">
-                <div class="col-6 float-left">
-                    <a href="{{ url('/') }}">We Fix it</a> | <a href="https://kopiluwakdirect.com/">Built with Caffiene</a> | <a href="{{ url('about') }}">About</a>
-                </div>
-                <div class="col-6 float-left">
-                    <span class="float-right"><a href="https://twitter.com/sat_boodead">Twitter</a> | <a href="https://www.mediotype.com/">Mediotype</a> | <a href="https://magento.com/">Magento</a></span>
+
+    <div id="footer" class="py-4 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 pt-1 pb-1">
+                    <div class="col-6 float-left">
+                        <a href="{{ url('/') }}">We Fix it</a> | <a href="https://kopiluwakdirect.com/">Built with Caffeine</a> | <a href="{{ url('about') }}">About</a>
+                    </div>
+                    <div class="col-6 float-left">
+                        <span class="float-right"><a href="https://twitter.com/sat_boodead">Twitter</a> | <a href="https://mattsherer.com/">MattSherer</a> | <a href="https://magento.com/">Magento</a></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 </body>
 </html>
