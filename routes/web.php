@@ -16,6 +16,7 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
+Route::get('/tags', 'TagController@index')->name('tag');
 Route::get('/user', 'UserController@index')->name('user');
 Route::post('/search', 'IssueController@search')->name('search');
 Route::resource('/user/issue', 'IssueController');
